@@ -25,7 +25,6 @@ for (int x = 7; x <= 70; x+=7)
 {
     Console.WriteLine(x);
 }
-}
 
 // Ejercicio 5
 Console.WriteLine("Ejercicio 5");
