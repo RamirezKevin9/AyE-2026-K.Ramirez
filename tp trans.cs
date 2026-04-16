@@ -126,7 +126,7 @@ Console.WriteLine("Ejercicio j: Ingrese una frase y se mostrará la cantidad de 
 Console.Write("Frase: ");
 string frase = Console.ReadLine();
 int contadorVocales = 0;
-string vocales = "aeiouáéíóúAEIOUÁÉÍÓÚüÜ";
+string vocales = "aeiouAEIOU";
 
 foreach (char c in frase)
 {
