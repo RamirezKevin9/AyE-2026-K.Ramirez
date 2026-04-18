@@ -137,3 +137,108 @@ foreach (char c in frase)
 }
 
 Console.WriteLine("Cantidad de vocales: " + contadorVocales);
+
+// ejercicio k
+Console.WriteLine("Ejercicio K");
+Console.Write("Ingrese un número: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Tabla de multiplicar del " +numero+":");
+for (int i = 1; i <= 12; i++)
+ {
+ Console.WriteLine(numero + "x" + i + "=" + numero * i);
+ }
+
+// ejercicio l
+Console.WriteLine("Ejercicio L");
+Console.WriteLine("Contador acumulativo. Ingrese números para acumular un total mayor a 100.");
+int acumulado = 0;
+while (acumulado <= 100)
+{
+    Console.Write("Ingrese un número: ");
+    int numero2 = Convert.ToInt32(Console.ReadLine());
+    acumulado += numero2;
+    Console.WriteLine("Total acumulado: " + acumulado);
+}
+Console.WriteLine("¡Has superado el total de 100!");
+
+// ejercicio m
+Console.WriteLine("Ejercicio M");
+Console.Write("Ingrese una palabra: ");
+string palabra = Console.ReadLine();
+
+foreach (char letra in palabra)
+{
+    Console.WriteLine(letra);
+}
+
+// ejercicio n
+Console.WriteLine("Ejercicio N");
+Console.Write("Ingrese su edad: ");
+int edad = Convert.ToInt32(Console.ReadLine());
+
+if (edad >= 18)
+{
+    Console.WriteLine("Puede votar y manejar.");
+}
+else if (edad >= 16)
+{
+    Console.WriteLine("Puede manejar, pero no puede votar.");
+}
+else
+{
+    Console.WriteLine("No puede votar ni manejar.");
+}
+
+// ejercicio o
+Console.WriteLine("Ejercicio O");
+Console.WriteLine("Números del 50 al 0 de forma descendente, de cinco en cinco:");
+for (int i = 50; i >= 0; i -= 5)
+{
+    Console.WriteLine(i);
+}
+
+// ejercicio p
+Console.WriteLine("Ejercicio P");
+string contraseña = "";
+string confirmacion = "";
+Console.Write("Ingrese una contraseña: ");
+contraseña = Console.ReadLine();
+Console.Write("Confirme la contraseña: ");
+confirmacion = Console.ReadLine();
+while (contraseña != confirmacion)
+{
+    Console.WriteLine("Las contraseñas no coinciden. Intente nuevamente.");
+    Console.Write("Ingrese una contraseña: ");
+    contraseña = Console.ReadLine();
+
+    Console.Write("Confirme la contraseña: ");
+    confirmacion = Console.ReadLine();
+}
+Console.WriteLine("Acceso permitido.");
+
+// ejercicio q
+Console.WriteLine("Ejercicio Q");
+string nombre = "";
+Console.Write("Ingrese un nombre: ");
+nombre = Console.ReadLine();
+while (nombre.Length <= 10)
+{
+    Console.WriteLine("Nombre ingresado: " + nombre);
+    Console.Write("Ingrese un nombre: ");
+    nombre = Console.ReadLine();
+}
+Console.WriteLine("El nombre tiene más de 10 caracteres. Fin del programa.");
+
+// ejercicio r
+Console.WriteLine("Ejercicio R");
+Console.Write("Ingrese una oración: ");
+string oracion = Console.ReadLine();
+int contadorA = 0;
+foreach (char letra in oracion)
+{
+    if (letra == 'a' || letra == 'A')
+    {
+        contadorA++;
+    }
+}
+Console.WriteLine("La oración tiene " + contadorA + " letras 'a'.");
