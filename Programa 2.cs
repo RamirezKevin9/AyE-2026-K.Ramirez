@@ -9,7 +9,6 @@ while (true)
 
     bool valido = true;
 
-    // Validar que todos sean números
     for (int i = 0; i < entrada.Length; i++)
     {
         if (entrada[i] < '0' || entrada[i] > '9')
@@ -30,7 +29,7 @@ while (true)
         }
 
         Console.WriteLine("El factorial es: " + factorial);
-        intentos = 3; // reset
+        intentos = 3;
     }
     else
     {
