@@ -1,63 +1,48 @@
-﻿Console.WriteLine("Programa 2: Calculadora de factoriales con intentos limitados.");
-Console.WriteLine("Ingrese un número entero positivo para calcular su factorial:");
-string frase = Console.ReadLine();
-int numero = Convert.ToInt32(frase);
-int factorial = 1;
+Console.WriteLine("Programa 2: Calculadora de factoriales con intentos limitados.");
+
 int intentos = 3;
-intentos = intentos - 1;
-Console.WriteLine("intentos restantes:" + intentos);
 
-while (intentos > 0)
+while (true)
 {
+    Console.WriteLine("Ingrese un número entero positivo:");
+    string entrada = Console.ReadLine();
 
-    bool tieneEspecial = false;
-    for (int i = 0; i < frase.Length; i++)
+    bool valido = true;
+
+    // Validar que todos sean números
+    for (int i = 0; i < entrada.Length; i++)
     {
-        char letra = frase[i];
-        if ((letra < '0' || letra > '9'))
+        if (entrada[i] < '0' || entrada[i] > '9')
         {
-            for (int f = 1; f <= numero; f++)
-            {
-                factorial = factorial * f;
-
-            }
-            Console.WriteLine($"El factorial de {numero} es: {factorial}");
-            Console.WriteLine("ingrese otro numero para calcular su factorial:");
-            numero = Convert.ToInt32(Console.ReadLine());
-            intentos = 3;
+            valido = false;
+            break;
         }
     }
 
-    if (tieneEspecial)
+    if (valido)
     {
-        Console.WriteLine("La frase contiene caracteres especiales o numeros negativos. Por favor, ingrese un numero entero positivo sin caracteres especiales.");
-        intentos--;
-        continue;
-    }
+        long numero = Convert.ToInt64(entrada);
 
-    break;
-}
+        long factorial = 1;
+        for (long i = 1; i <= numero; i++)
+        {
+            factorial *= i;
+        }
 
-
-while (intentos > 0)
-{
-    if (numero < 0)
-    {
-        intentos--;
-        Console.WriteLine("Número inválido. Por favor, ingrese un número entero positivo:");
-        numero = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("El factorial es: " + factorial);
+        intentos = 3; // reset
     }
     else
     {
-        for (int f = 1; f <= numero; f++)
+        intentos--;
+        if (intentos > 0)
         {
-            factorial = factorial * f;
-
+            Console.WriteLine("No es válido (" + intentos + " intentos restantes)");
         }
-        Console.WriteLine($"El factorial de {numero} es: {factorial}");
-        Console.WriteLine("ingrese otro numero para calcular su factorial:");
-        numero = Convert.ToInt32(Console.ReadLine());
-        intentos = 3;
+        else
+        {
+            Console.WriteLine("No tiene más intentos");
+            break;
+        }
     }
-    Console.WriteLine("intentos restantes:" + intentos);
 }
