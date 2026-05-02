@@ -107,21 +107,25 @@ Console.WriteLine("Celsius: " + c);
 
 // Ejercicio 9
 Console.WriteLine("Ejercicio 9");
-Console.WriteLine("Hora1 Min1 Seg1:");
+Console.WriteLine("Dados la hora, minutos y los segundos de dos instantes, la computadora muestra cuantos segundos contiene el intervalo que abarcan.:");
+Console.WriteLine("Hora1:");
 int h1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Min1:");
 int m1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Seg1:");
 int s1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Hora2 Min2 Seg2:");
+Console.WriteLine("Hora2:");
 int h2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Min2:");
 int m2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Seg2:");
 int s2 = Convert.ToInt32(Console.ReadLine());
 
-if (h1>=0 && h1<24 && m1>=0 && m1<60 && s1>=0 && s1<60 &&
-    h2>=0 && h2<24 && m2>=0 && m2<60 && s2>=0 && s2<60)
+if (h1 >= 0 && h1 < 24 && m1 >= 0 && m1 < 60 && s1 >= 0 && s1 < 60 &&
+    h2 >= 0 && h2 < 24 && m2 >= 0 && m2 < 60 && s2 >= 0 && s2 < 60)
 {
-    int t1 = h1*3600 + m1*60 + s1;
-    int t2 = h2*3600 + m2*60 + s2;
+    int t1 = h1 * 3600 + m1 * 60 + s1;
+    int t2 = h2 * 3600 + m2 * 60 + s2;
 
     Console.WriteLine("Intervalo: " + (t2 - t1) + " segundos");
 }
