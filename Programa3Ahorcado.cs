@@ -1,11 +1,10 @@
-﻿    
 Console.WriteLine("Juego de adivinanza de palabras:");
 Console.Write("Ingrese la palabra a adivinar:");
-string palabra = Console.ReadLine().ToUpper();
+string palabra = Console.ReadLine();
 string palabraAdivinada = new string('_', palabra.Length);
 int intentos = 7;
- 
-    while (intentos > 0 && palabraAdivinada.Contains('_'))
+
+while (intentos > 0 && palabraAdivinada.Contains('_'))
 {
     Console.WriteLine($"Palabra: {palabraAdivinada}");
     Console.WriteLine($"Intentos restantes: {intentos}");
