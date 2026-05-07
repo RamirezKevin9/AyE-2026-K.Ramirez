@@ -21,7 +21,7 @@ try
         Console.WriteLine($"Intentos restantes: {intentos}");
         Console.Write("Ingresa una letra: ");
 
-        string input = Console.ReadLine() ?? "";
+        string input = Console.ReadLine();
         if (input.Length == 0)
         {
             Console.WriteLine("Entrada vacía. Intenta otra letra.");
