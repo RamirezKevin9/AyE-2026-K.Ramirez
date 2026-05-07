@@ -1,36 +1,63 @@
-﻿    
-Console.WriteLine("Juego de adivinanza de palabras:");
-Console.Write("Ingrese la palabra a adivinar:");
-string palabra = Console.ReadLine().ToUpper();
-string palabraAdivinada = new string('_', palabra.Length);
-int intentos = 7;
- 
-    while (intentos > 0 && palabraAdivinada.Contains('_'))
+try
 {
-    Console.WriteLine($"Palabra: {palabraAdivinada}");
-    Console.WriteLine($"Intentos restantes: {intentos}");
-    Console.WriteLine("Ingrese una letra:");
-    char letra = Console.ReadLine()[0];
-    if (palabra.Contains(letra))
+    Console.WriteLine("Juego del ahorcado - 7 intentos");
+    string palabra = "pepito";
+    char[] oculto = new char[palabra.Length];
+    for (int i = 0; i < oculto.Length; i++) oculto[i] = '_';
+    int intentos = 7;
+
+    while (intentos > 0)
     {
+        bool quedanGuiones = false;
+        for (int i = 0; i < oculto.Length; i++)
+        {
+            if (oculto[i] == '_') { quedanGuiones = true; break; }
+        }
+        if (!quedanGuiones) break;
+
+        Console.Write("Palabra: ");
+        for (int i = 0; i < oculto.Length; i++) Console.Write(oculto[i]);
+        Console.WriteLine();
+        Console.WriteLine($"Intentos restantes: {intentos}");
+        Console.Write("Ingresa una letra: ");
+
+        string input = Console.ReadLine() ?? "";
+        if (input.Length == 0)
+        {
+            Console.WriteLine("Entrada vacía. Intenta otra letra.");
+            continue;
+        }
+
+        char letra = input[0];
+        bool acierto = false;
         for (int i = 0; i < palabra.Length; i++)
         {
             if (palabra[i] == letra)
             {
-                palabraAdivinada = palabraAdivinada.Remove(i, 1).Insert(i, letra.ToString());
+                oculto[i] = letra;
+                acierto = true;
             }
         }
+
+        if (!acierto)
+        {
+            intentos--;
+            Console.WriteLine("Letra incorrecta.");
+        }
     }
-    else
+
+    bool completado = true;
+    for (int i = 0; i < oculto.Length; i++)
     {
-        intentos--;
+        if (oculto[i] == '_') { completado = false; break; }
     }
+
+    if (completado)
+        Console.WriteLine($"¡Felicidades! Has adivinado la palabra: {palabra}");
+    else
+        Console.WriteLine($"Has perdido. La palabra era: {palabra}");
 }
-if (palabraAdivinada == palabra)
+catch (Exception ex)
 {
-    Console.WriteLine($"¡Felicidades! Adivinaste la palabra: {palabra}");
-}
-else
-{
-    Console.WriteLine($"Se acabaron los intentos. La palabra era: {palabra}");
+    Console.WriteLine($"Ha ocurrido un error: {ex.Message}");
 }
