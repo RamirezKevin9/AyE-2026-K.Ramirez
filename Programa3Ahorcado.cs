@@ -1,7 +1,7 @@
 try
 {
-    Console.WriteLine("Juego del ahorcado - 7 intentos");
-    string palabra = "pepito";
+    Console.WriteLine("Juego del ahorcado: 7 intentos para adivinar");
+    string palabra = "PlantavsZombis";
     char[] oculto = new char[palabra.Length];
     for (int i = 0; i < oculto.Length; i++) oculto[i] = '_';
     int intentos = 7;
