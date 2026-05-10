@@ -1,12 +1,10 @@
 // Ejercicio 1
-Console.WriteLine("Ejercicio 1");
-
-void MostrarNumeros(int x)
+void MostrarNumeros(int numero)
 {
-    if (x <= 10)
+    if (numero <= 10)
     {
-        Console.WriteLine(x);
-        MostrarNumeros(x + 1);
+        Console.WriteLine(numero);
+        MostrarNumeros(numero + 1);
     }
 }
 
@@ -14,61 +12,53 @@ MostrarNumeros(0);
 
 
 // Ejercicio 2
-Console.WriteLine("Ejercicio 2");
-
-void HolaMundo(int x)
+void MostrarHola(int veces)
 {
-    if (x < 5)
+    if (veces < 5)
     {
         Console.WriteLine("Hola Mundo");
-        HolaMundo(x + 1);
+        MostrarHola(veces + 1);
     }
 }
 
-HolaMundo(0);
+MostrarHola(0);
 
 
 // Ejercicio 3
-Console.WriteLine("Ejercicio 3");
-
-void Pares(int x)
+void MostrarPares(int numeroPar)
 {
-    if (x <= 20)
+    if (numeroPar <= 20)
     {
-        Console.WriteLine(x);
-        Pares(x + 2);
+        Console.WriteLine(numeroPar);
+        MostrarPares(numeroPar + 2);
     }
 }
 
-Pares(2);
+MostrarPares(2);
 
 
 // Ejercicio 4
-Console.WriteLine("Ejercicio 4");
-
-void MultiplosDe7(int x)
+void MostrarMultiplos7(int multiplo)
 {
-    if (x <= 70)
+    if (multiplo <= 70)
     {
-        Console.WriteLine(x);
-        MultiplosDe7(x + 7);
+        Console.WriteLine(multiplo);
+        MostrarMultiplos7(multiplo + 7);
     }
 }
 
-MultiplosDe7(7);
+MostrarMultiplos7(7);
 
 
 // Ejercicio 5
-Console.WriteLine("Ejercicio 5");
-
-void SumaRecursiva(int numero, int suma)
+void MostrarSuma(int numero, int suma)
 {
     if (numero <= 5)
     {
-        suma += numero;
+        suma = suma + numero;
         Console.WriteLine(suma);
-        SumaRecursiva(numero + 1, suma);
+        MostrarSuma(numero + 1, suma);
     }
 }
 
-SumaRecursiva(1, 0);
+MostrarSuma(1, 0);
