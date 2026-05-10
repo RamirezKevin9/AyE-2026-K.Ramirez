@@ -3,10 +3,9 @@ Console.WriteLine("Ejercicio 1");
 
 void Contraseña()
 {
-    string correcta = "777";
-    string ingresada = Console.ReadLine();
+    string contraseña = Console.ReadLine();
 
-    if (ingresada == correcta)
+    if (contraseña == "777")
     {
         Console.WriteLine("Contraseña correcta");
     }
@@ -16,9 +15,7 @@ void Contraseña()
         Contraseña();
     }
 }
-
 Contraseña();
-
 
 // Ejercicio 2
 Console.WriteLine("Ejercicio 2");
@@ -35,9 +32,7 @@ void Cuenta(int numero)
         Console.WriteLine("¡Despegue!");
     }
 }
-
 Cuenta(5);
-
 
 // Ejercicio 3
 Console.WriteLine("Ejercicio 3");
@@ -56,25 +51,23 @@ void Adivinar()
         Adivinar();
     }
 }
-
 Adivinar();
 
 
 // Ejercicio 4
 Console.WriteLine("Ejercicio 4");
 
-void Suma(int total)
+void Suma(int suma)
 {
     int numero = Convert.ToInt32(Console.ReadLine());
 
     if (numero == 0)
     {
-        Console.WriteLine(total);
+        Console.WriteLine(suma);
     }
     else
     {
-        Suma(total + numero);
+        Suma(suma + numero);
     }
 }
-
 Suma(0);
