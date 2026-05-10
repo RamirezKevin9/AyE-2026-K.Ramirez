@@ -7,9 +7,7 @@ void MostrarNumeros(int numero)
         MostrarNumeros(numero + 1);
     }
 }
-
 MostrarNumeros(0);
-
 
 // Ejercicio 2
 void MostrarHola(int veces)
@@ -20,9 +18,7 @@ void MostrarHola(int veces)
         MostrarHola(veces + 1);
     }
 }
-
 MostrarHola(0);
-
 
 // Ejercicio 3
 void MostrarPares(int numeroPar)
@@ -33,9 +29,7 @@ void MostrarPares(int numeroPar)
         MostrarPares(numeroPar + 2);
     }
 }
-
 MostrarPares(2);
-
 
 // Ejercicio 4
 void MostrarMultiplos7(int multiplo)
@@ -46,9 +40,7 @@ void MostrarMultiplos7(int multiplo)
         MostrarMultiplos7(multiplo + 7);
     }
 }
-
 MostrarMultiplos7(7);
-
 
 // Ejercicio 5
 void MostrarSuma(int numero, int suma)
