@@ -14,12 +14,12 @@ void CalcularSalario(int horasTrabajadas)
 {
     if (horasTrabajadas <= 40)
     {
-        int salarioSemanal = (horasTrabajadas * 16) * 7;
+        int salarioSemanal = (horasTrabajadas * 16) * 5;
         Console.WriteLine("El salario semanal del obrero es: $" + salarioSemanal);
     }
     else
     {
-        int salarioSemanal = ((40 * 16) + ((horasTrabajadas - 40) * 20)) * 7;
+        int salarioSemanal = ((40 * 16) + ((horasTrabajadas - 40) * 20)) * 5;
         Console.WriteLine("El salario semanal del obrero es: $" + salarioSemanal);
     }
 }
