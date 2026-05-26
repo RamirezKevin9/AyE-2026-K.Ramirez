@@ -1,6 +1,7 @@
 ﻿string[] nombres = new string[100];
 string[] telefonos = new string[100];
 int total = 0;
+bool fin = false
 void Agregarcontactos() {
     Console.Write("Nombre: "); nombres[total] = Console.ReadLine();
     Console.Write("Teléfono: "); telefonos[total] = Console.ReadLine();
@@ -22,7 +23,7 @@ void Buscarcontactos()
         if (nombres[i] == buscar) { Console.WriteLine($"{nombres[i]} → {telefonos[i]}"); encontrado = true; }
     if (!encontrado) Console.WriteLine("No encontrado.");
 }
-    while (true)
+    while (fin == false)
     {
     Console.WriteLine("1.Agregar contactos 2.Ver contactos  3.Buscar contactos 4.Salir");
     switch (Console.ReadLine())
@@ -37,6 +38,7 @@ void Buscarcontactos()
             Buscarcontactos();
             break;
         case "4":
-            return;
+            fin = true
+            break;
     }
     }
