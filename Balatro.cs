@@ -8,9 +8,7 @@ string[] valores = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 while (true)
 {
     Console.WriteLine("¿Qué quieres hacer?");
-    Console.WriteLine("1. Pedir cartas");
-    Console.WriteLine("2. Descartar cartas");
-    Console.WriteLine("3. Salir");
+    Console.WriteLine("1. Pedir cartas, 2. Descartar cartas y 3. Salir");
     string opcion = Console.ReadLine();
     if (opcion == "1")
     {
