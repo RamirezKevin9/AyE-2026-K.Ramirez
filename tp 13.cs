@@ -1,6 +1,6 @@
 ﻿// Ejercicio 1:
 Console.WriteLine("Ejercicio 1:");
-string[] nombres = { "canser testicular", "canser de pancreas", "canser de prostata", "canservero", "tienes canser andi", "Cáncer de pulmón", "Cáncer colorrectal", "Cáncer de mama triple negativo", "Cáncer de hígado", "Geografia" };
+string[] nombres = { "canser testicular", "canser de pancreas", "canser de prostata", "canserbero", "tienes canser andy", "Cáncer de pulmón", "Cáncer colorrectal", "Cáncer de mama triple negativo", "Cáncer de hígado", "Geografia" };
 string palabraMasLarga = "";
 for (int i = 0; i < nombres.Length; i++)
 {
