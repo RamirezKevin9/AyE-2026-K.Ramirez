@@ -1,5 +1,3 @@
-using System;
-
 Console.WriteLine("Bienvenido al juego de Balatro");
 string[] cartas = new string[8];
 int[] valoresCartas = new int[8];
