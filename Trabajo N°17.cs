@@ -1,5 +1,5 @@
 // ejercicio 1.
-Console.WriteLine("1.triángulo rectángulo:");
+Console.WriteLine("1. triángulo rectángulo:");
 Console.WriteLine("");
 int[][] triangulo = new int[4][];
 int contador = 1;
