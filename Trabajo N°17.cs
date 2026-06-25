@@ -1,5 +1,6 @@
-﻿// ejercicio 1.
-Console.WriteLine("triángulo rectángulo");
+// ejercicio 1.
+Console.WriteLine("1.triángulo rectángulo:");
+Console.WriteLine("");
 int[][] triangulo = new int[4][];
 int contador = 1;
 
@@ -13,7 +14,6 @@ for (int i = 0; i < triangulo.Length; i++)
     }
 }
 
-Console.WriteLine("triángulo rectángulo:");
 for (int i = 0; i < triangulo.Length; i++)
 {
     for (int j = 0; j < triangulo[i].Length; j++)
@@ -24,7 +24,10 @@ for (int i = 0; i < triangulo.Length; i++)
 }
 
 // ejercicio 2.
-Console.WriteLine("contar elementos totales");
+Console.WriteLine("");
+Console.WriteLine("2. contar elementos totales");
+Console.WriteLine("");
+
 int[][] matriz2 = new int[][]
 {
     new int[] { 1, 2 },
@@ -40,7 +43,9 @@ for (int i = 0; i < matriz2.Length; i++)
 Console.WriteLine($"total de elementos: {total}");
 
 // ejercicio 3
-Console.WriteLine(". fila más larga");
+Console.WriteLine("");
+Console.WriteLine("3. fila más larga");
+Console.WriteLine("");
 int[][] matriz3 = new int[][]
 {
     new int[] { 1, 2 },
@@ -62,7 +67,9 @@ for (int i = 0; i < matriz3.Length; i++)
 Console.WriteLine($"fila más larga: índice {indiceMasLargo} con {longitudMaxima} elementos");
 
 // ejercicio 4
+Console.WriteLine("");
 Console.WriteLine("4. suma por filas");
+Console.WriteLine("");
 int[][] matriz4 = new int[][]
 {
     new int[] { 1, 2 },
@@ -88,7 +95,9 @@ for (int i = 0; i < sumaFilas.Length; i++)
 }
 
 // ejercicio 5
-Console.WriteLine("valor máximo");
+Console.WriteLine("");
+Console.WriteLine("5.valor máximo");
+Console.WriteLine("");
 int[][] matriz5 = new int[][]
 {
     new int[] { 1, 2 },
@@ -115,7 +124,9 @@ for (int i = 0; i < matriz5.Length; i++)
 Console.WriteLine($"valor máximo: {maximo} en fila {filaMax}, columna {columnaMax}");
 
 // ejercicio 6
-Console.WriteLine("promedio escolar");
+Console.WriteLine("");
+Console.WriteLine("6.promedio escolar");
+Console.WriteLine("");
 double[][] notas = new double[][]
 {
     new double[] { 8.5, 9.0, 7.5 },
@@ -142,7 +153,9 @@ for (int i = 0; i < promedios.Length; i++)
 }
 
 // ejercicio 7
-Console.WriteLine("buscar un intruso");
+Console.WriteLine("");
+Console.WriteLine("7.buscar un intruso");
+Console.WriteLine("");
 int[][] matriz7 = new int[][]
 {
     new int[] { 1, 2 },
