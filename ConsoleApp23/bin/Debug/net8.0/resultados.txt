@@ -1,0 +1,25 @@
+Ejercicio 1
+Unidades: 3
+Decenas: 2
+Ejercicio 2
+Valor: 345
+Cifra central: 4
+Ejercicio 3
+Precio con descuento: $19
+Ejercicio 4
+Permutado: 21
+Ejercicio 5
+Mes inválido
+Ejercicio 6
+Perímetro: 16
+Superficie: 16
+Ejercicio 7
+Sueldo: 10701
+Ejercicio 8
+Celsius: 277
+Ejercicio 9
+Error
+Ejercicio 10
+Unidades: 3
+Decenas: 2
+Centenas: 1
